@@ -89,6 +89,7 @@ Secondary Objectives
 Scope
 
 |Dimension| Details|
+|---|---|
 |`In Scope`| Customer demographics, services, billing, contracts, tenure, churn behavior and dashboard analysis|
 |`Out of Scope`| Individual customer prediction, automated retention campaigns and causal inference|
 |`Unit of Analysis`| Individual customer|
