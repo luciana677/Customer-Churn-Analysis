@@ -1,4 +1,4 @@
-📊 Customer Churn Analytics
+📊 # Customer Churn Analytics
 
 An end-to-end data analytics project investigating customer churn patterns, customer behavior, service usage, contract types, and billing characteristics to identify factors associated with customer retention and churn.
 
@@ -9,29 +9,27 @@ An end-to-end data analytics project investigating customer churn patterns, cust
 - Exploratory Data Analysis (EDA)
 - Data Cleaning / Wrangling
 - Customer Churn Analysis
-- SQL Analysis
 - Dashboard / Data Visualization
 - Business Intelligence
 - End-to-End Analytics Project
 
 ---
+## Table of Contents
 
-📑 Table of Contents
-
-1. "Project Overview" (#1-project-overview)
-2. "Objectives" (#2-objectives)
-3. "Project Scope & Tools" (#3-project-scope--tools)
-4. "Repository Structure" (#4-repository-structure)
-5. "Data Workflow" (#5-data-workflow)
-6. "Dataset Overview" (#6-dataset-overview)
-7. "Analysis & Metrics" (#7-analysis--metrics)
-8. "Key Insights" (#8-key-insights)
-9. "Business Recommendations" (#9-business-recommendations)
-10. "Assumptions & Limitations" (#10-assumptions--limitations)
-11. "Future Enhancements" (#11-future-enhancements)
-12. "Dashboard" (#12-dashboard)
-13. "Deliverables" (#13-deliverables)
-14. "Author" (#14-author)
+1. [Project Overview](#1-project-overview)
+2. [Objectives](#2-objectives)
+3. [Project Scope & Tools](#3-project-scope--tools)
+4. [Repository Structure](#4-repository-structure)
+5. [Data Workflow](#5-data-workflow)
+6. [Dataset Overview](#6-dataset-overview)
+7. [Analysis & Metrics](#7-analysis--metrics)
+8. [Key Insights](#8-key-insights)
+9. [Business Recommendations](#9-business-recommendations)
+10. [Assumptions & Limitations](#10-assumptions--limitations)
+11. [Future Enhancements](#11-future-enhancements)
+12. [Dashboard](#12-dashboard)
+13. [Deliverables](#13-deliverables)
+14. [Author](#14-author)
 
 ---
 
@@ -47,7 +45,7 @@ The objective of this project was to analyze customer data and identify patterns
 
 Approach
 
-The project involved data inspection, data cleaning, exploratory analysis, SQL-based analysis, and interactive dashboard development.
+The project involved data inspection, data cleaning, exploratory analysis, and interactive dashboard development.
 
 Key areas investigated include:
 
@@ -81,7 +79,6 @@ Secondary Objectives
 - Investigate the relationship between tenure and churn.
 - Examine churn patterns across contract and payment types.
 - Analyze monthly and total charges by churn status.
-- Use SQL to answer business-focused analytical questions.
 - Develop an interactive dashboard for communicating findings.
 - Translate analytical findings into actionable business recommendations.
 
@@ -91,28 +88,28 @@ Secondary Objectives
 
 Scope
 
-Dimension| Details
-In Scope| Customer demographics, services, billing, contracts, tenure, churn behavior and dashboard analysis
-Out of Scope| Individual customer prediction, automated retention campaigns and causal inference
-Unit of Analysis| Individual customer
-Target Variable| "Churn"
-Analysis Focus| Factors associated with customer churn
+|Dimension| Details|
+|`In Scope`| Customer demographics, services, billing, contracts, tenure, churn behavior and dashboard analysis|
+|`Out of Scope`| Individual customer prediction, automated retention campaigns and causal inference|
+|`Unit of Analysis`| Individual customer|
+|`Target Variable`| "Churn"|
+|`Analysis Focus`| Factors associated with customer churn|
 
 Tools & Technologies
 
-Category| Tool(s) Used
-Data Source| CSV Dataset
-Data Processing| Python
-Data Analysis| Python / Jupyter Notebook
-Business Analysis| SQL
-Visualization| Power BI
-Version Control| Git / GitHub
-Documentation| Markdown
+|Category| Tool(s) Used|
+|----|----|
+|`Data Source`| CSV Dataset|
+|`Data Processing`| Python|
+|`Data Analysis`| Python / Jupyter Notebook|
+|`Visualization`| Power BI|
+|`Version Control`| Git / GitHub|
+|`Documentation`| Markdown|
 
 ---
 
 4. Repository Structure
-
+```
 📊 Customer-Churn-Analytics
 │
 ├── 📂 data
@@ -125,23 +122,20 @@ Documentation| Markdown
 ├── 📂 notebooks
 │   └── customer_churn_analysis.ipynb
 │
-├── 📂 sql
-│   └── churn_analysis.sql
 │
 ├── 📂 visuals
 │   ├── 📂 dashboard
-│   │   └── customer_churn_dashboard.png
-│   │
-│   └── 📂 eda
-│       └── [selected EDA visuals]
+│   └── customer_churn_dashboard.png
+│   |___ customer_churn_dashboard.pbix
+│  
 │
 ├── 📄 .gitignore
 └── 📄 README.md
-
+```
 ---
 
 5. Data Workflow
-
+```
 Raw Dataset
      ↓
 Data Inspection
@@ -159,7 +153,7 @@ Power BI Visualization
 Dashboard & Insights
      ↓
 Business Recommendations
-
+```
 1. Data Source
 
 The project uses a customer churn dataset containing demographic, service, contract, billing, and churn information.
@@ -186,10 +180,6 @@ Particular attention was given to the "TotalCharges" field, where values require
 
 Customer characteristics were compared across churn groups to identify patterns in customer behavior and service usage.
 
-5. SQL Analysis
-
-SQL was used to answer business-focused questions and calculate churn-related metrics across customer segments.
-
 6. Visualization
 
 Key findings were transformed into interactive Power BI visuals and dashboard components.
@@ -208,29 +198,29 @@ The dataset contains customer-level information covering demographics, services,
 
 Key Fields
 
-Field| Description
-"customerID"| Unique customer identifier
-"gender"| Customer gender
-"SeniorCitizen"| Indicates whether the customer is a senior citizen
-"Partner"| Whether the customer has a partner
-"Dependents"| Whether the customer has dependents
-"tenure"| Number of months the customer has stayed with the company
-"PhoneService"| Whether the customer has phone service
-"MultipleLines"| Multiple phone line subscription status
-"InternetService"| Type of internet service
-"OnlineSecurity"| Online security subscription
-"OnlineBackup"| Online backup subscription
-"DeviceProtection"| Device protection subscription
-"TechSupport"| Technical support subscription
-"StreamingTV"| Streaming TV subscription
-"StreamingMovies"| Streaming movies subscription
-"Contract"| Customer contract type
-"PaperlessBilling"| Paperless billing status
-"PaymentMethod"| Customer payment method
-"MonthlyCharges"| Monthly amount charged
-"TotalCharges"| Total amount charged
-"Churn"| Customer churn status
-
+| Field | Description |
+|---|---|
+| `customerID` | Unique customer identifier |
+| `gender` | Customer gender |
+| `SeniorCitizen` | Indicates whether the customer is a senior citizen |
+| `Partner` | Whether the customer has a partner |
+| `Dependents` | Whether the customer has dependents |
+| `tenure` | Number of months the customer has stayed with the company |
+| `PhoneService` | Whether the customer has phone service |
+| `MultipleLines` | Multiple phone line subscription status |
+| `InternetService` | Type of internet service |
+| `OnlineSecurity` | Online security subscription |
+| `OnlineBackup` | Online backup subscription |
+| `DeviceProtection` | Device protection subscription |
+| `TechSupport` | Technical support subscription |
+| `StreamingTV` | Streaming TV subscription |
+| `StreamingMovies` | Streaming movies subscription |
+| `Contract` | Customer contract type |
+| `PaperlessBilling` | Paperless billing status |
+| `PaymentMethod` | Customer payment method |
+| `MonthlyCharges` | Monthly amount charged |
+| `TotalCharges` | Total amount charged |
+| `Churn` | Customer churn status |
 Unit of Analysis
 
 One row represents an individual customer.
@@ -273,27 +263,16 @@ The following areas were investigated:
 
 Key Metrics
 
-Metric| Definition| Purpose
-Total Customers| Number of unique customers| Understand customer base size
-Churned Customers| Number of customers who churned| Measure customer loss
-Churn Rate| Churned customers ÷ total customers| Measure overall churn
-Retention Rate| Retained customers ÷ total customers| Measure customer retention
-Average Tenure| Mean customer tenure| Compare customer longevity
-Average Monthly Charges| Mean monthly charges| Examine billing patterns
-Average Total Charges| Mean total charges| Examine customer revenue contribution
+|Metric| Definition| Purpose|
+|----|----|----|
+|`Total Customers`| Number of unique customers| Understand customer base size|
+|`Churned Customers`| Number of customers who churned| Measure customer loss|
+|`Churn Rate`| Churned customers ÷ total customers| Measure overall churn|
+|`Retention Rate`| Retained customers ÷ total customers| Measure customer retention|
+|`Average Tenure`| Mean customer tenure| Compare customer longevity|
+|`Average Monthly Charges`| Mean monthly charges| Examine billing patterns|
+|`Average Total Charges`| Mean total charges| Examine customer revenue contribution|
 
-SQL Business Questions
-
-SQL analysis was used to answer questions such as:
-
-- What is the overall customer churn rate?
-- Which contract types have the highest churn?
-- How does churn vary by internet service?
-- How does churn differ by payment method?
-- What is the average tenure of churned versus retained customers?
-- How do monthly charges differ between churned and retained customers?
-- Which customer segments show higher churn rates?
-- Which services are associated with lower or higher churn?
 
 ---
 
@@ -406,25 +385,30 @@ Dashboard Features
 - Interactive filters/slicers
 - Key analytical insights
 
-Dashboard Preview
+## Dashboard KPIs
+| Dashboard Component | Metric |
+|---|---|
+| `Total Customers` | 7,043 |
+| `Churned Customers` | 1,869 |
+| `Churn Rate` | 26.54% |
+| `Average Monthly Charges` | $64.76 |
 
 "Customer Churn Dashboard"
 
 visuals/dashboard/customer_churn_dashboard.png
 
-Power BI Dashboard: [Add your shareable dashboard link here]
 
 ---
 
 13. Deliverables
 
-Deliverable| Description| Location
-Cleaned Dataset| Processed dataset used for analysis| "/data/processed/"
-Jupyter Notebook| Data cleaning and exploratory analysis| "/notebooks/"
-SQL Analysis| Business-focused churn queries| "/sql/"
-Dashboard| Interactive Power BI dashboard| Power BI link
-Dashboard Screenshot| Portfolio-ready dashboard image| "/visuals/"
-README| Project documentation| "/README.md"
+|Deliverable| Description| Location|
+|---|---|---|
+|`Cleaned Dataset`| Processed dataset used for analysis| "/data/processed/"|
+|`Jupyter Notebook`| Data cleaning and exploratory analysis| "/notebooks/"|
+|`Dashboard`| Interactive Power BI dashboard| Power BI link|
+|`Dashboard Screenshot`| Portfolio-ready dashboard image| "/visuals/"|
+|`README`| Project documentation| "/README.md"|
 
 ---
 
