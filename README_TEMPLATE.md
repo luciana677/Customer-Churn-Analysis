@@ -1,4 +1,4 @@
-📊 # Customer Churn Analytics
+## 📊 Customer Churn Analytics
 
 An end-to-end data analytics project investigating customer churn patterns, customer behavior, service usage, contract types, and billing characteristics to identify factors associated with customer retention and churn.
 
@@ -315,13 +315,14 @@ Additional services such as online security, online backup, device protection, a
 
 9. Business Recommendations
 
-Priority| Recommendation| Based On
-High| Develop targeted retention strategies for high-churn customer segments.| Segment-level churn analysis
-High| Investigate the factors contributing to the high churn rate among Fiber optic customers.| Internet service analysis
-High| Encourage suitable customers to move toward longer-term contracts through appropriate incentives.| Contract analysis
-Medium| Strengthen early-stage customer engagement to reduce churn among newer customers.| Tenure analysis
-Medium| Review pricing and billing patterns among high-churn customers.| Monthly charges analysis
-Medium| Evaluate the value of additional support and security services as retention tools.| Service-level analysis
+|Priority| Recommendation| Based On|
+|---|---|---|
+|`High`| Develop targeted retention strategies for high-churn customer segments.| Segment-level churn analysis|
+|`High`| Investigate the factors contributing to the high churn rate among Fiber optic customers.| Internet service analysis|
+|`High`| Encourage suitable customers to move toward longer-term contracts through appropriate incentives.| Contract analysis|
+|`Medium`| Strengthen early-stage customer engagement to reduce churn among newer customers.| Tenure analysis|
+|`Medium`| Review pricing and billing patterns among high-churn customers.| Monthly charges analysis|
+|`Medium`| Evaluate the value of additional support and security services as retention tools.| Service-level analysis|
 
 «These recommendations are based on observed associations in the dataset and should be validated with additional business and customer-level information before implementation.»
 
