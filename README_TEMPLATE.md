@@ -1,1 +1,443 @@
-# ðŸ“Š Customer Churn AnalyticsAn end-to-end data analytics and business intelligence project focused on understanding customer churn, identifying high-risk customer segments, and uncovering patterns that can support customer retention strategies.---## ðŸ“Œ Project Type| Category | Details ||---|---|| Project Type | End-to-End Data Analytics Project || Analysis | Exploratory Data Analysis (EDA) || Business Focus | Customer Churn & Retention || Data Preparation | Data Cleaning / Wrangling || Business Analysis | SQL || Visualization | Power BI || Documentation | Markdown || Version Control | Git / GitHub |---# 1. Project Overview## ContextCustomer churn is an important business challenge for subscription-based companies. Understanding which customers are more likely to leave can help businesses identify high-risk segments and develop more targeted retention strategies.## Problem StatementThis project analyzes customer demographic, service, contract, tenure, and payment information to identify patterns associated with customer churn.The analysis focuses on answering questions such as:- How many customers have churned?- What is the overall churn rate?- Which contract types have the highest churn?- Which internet service users are more likely to churn?- Which payment methods are associated with higher churn?- At what stage of the customer lifecycle is churn highest?## Project OutcomeThe analysis produced a cleaned dataset, exploratory analysis, SQL-based business analysis, and an interactive Power BI dashboard that communicates the major churn patterns.---# 2. Objectives| Objective | Description ||---|---|| 1 | Determine the overall customer churn rate || 2 | Compare churned and retained customers || 3 | Identify high-risk customer segments || 4 | Analyze churn across contract types || 5 | Examine churn by internet service || 6 | Investigate churn across payment methods || 7 | Analyze churn across customer tenure groups || 8 | Build an interactive Power BI dashboard || 9 | Translate findings into practical business recommendations |---# 3. Dataset OverviewThe dataset contains **7,043 customer records** and includes demographic, service, contract, payment, tenure, and billing information.| Field | Description ||---|---|| `customerID` | Unique customer identifier || `gender` | Customer gender || `SeniorCitizen` | Indicates whether the customer is a senior citizen || `Partner` | Whether the customer has a partner || `Dependents` | Whether the customer has dependents || `tenure` | Number of months the customer has stayed with the company || `PhoneService` | Whether the customer has phone service || `MultipleLines` | Multiple phone line subscription status || `InternetService` | Customer's internet service type || `OnlineSecurity` | Online security subscription || `OnlineBackup` | Online backup subscription || `DeviceProtection` | Device protection subscription || `TechSupport` | Technical support subscription || `StreamingTV` | Streaming TV subscription || `StreamingMovies` | Streaming movies subscription || `Contract` | Customer contract type || `PaperlessBilling` | Paperless billing status || `PaymentMethod` | Customer payment method || `MonthlyCharges` | Monthly amount charged || `TotalCharges` | Total amount charged || `Churn` | Whether the customer churned |### Dataset Structure| Attribute | Value ||---|---|| Total Records | 7,043 || Unit of Analysis | Individual customer || Target Variable | `Churn` || Churned Customers | 1,869 || Retained Customers | 5,174 |---# 4. Project WorkflowThe project followed a structured analytics workflow from raw data to business insights.| Step | Stage | Activity | Output ||---|---|---|---|| 1 | Data Collection | Load the customer churn dataset | Raw customer data || 2 | Data Inspection | Examine structure, data types, missing values and data quality | Data-quality findings || 3 | Data Cleaning | Clean and prepare fields for analysis, including `TotalCharges` | Analysis-ready dataset || 4 | Exploratory Analysis | Investigate churn patterns across customer characteristics | EDA findings || 5 | SQL Analysis | Answer business questions using SQL | Business metrics and segment analysis || 6 | KPI Development | Calculate total customers, churned customers, churn rate and average monthly charges | KPI metrics || 7 | Power BI Visualization | Build charts, KPI cards and interactive slicers | Interactive dashboard || 8 | Insight Generation | Interpret the major churn patterns | Key business insights || 9 | Recommendations | Translate findings into potential retention actions | Business recommendations |---# 5. Tools & Technologies| Tool | Purpose ||---|---|| Python | Data cleaning and exploratory analysis || Jupyter Notebook | Analysis and documentation || SQL | Business-focused data analysis || Power BI | Interactive dashboard and visualization || Git | Version control || GitHub | Project hosting and portfolio presentation || Markdown | Project documentation |---# 6. Analysis & Key MetricsThe analysis focused on understanding the size of the customer base, the scale of churn, and the customer segments where churn is most concentrated.## KPI Results| KPI | Result | Purpose ||---|---:|---|| Total Customers | **7,043** | Measures the total customer base || Churned Customers | **1,869** | Measures the number of customers lost || Retained Customers | **5,174** | Measures the number of customers retained || Churn Rate | **26.54%** | Measures the proportion of customers who churned || Average Monthly Charges | **$64.76** | Measures the average monthly customer charge |## Churn Distribution| Churn Status | Customers | Percentage ||---|---:|---:|| No | 5,174 | 73.46% || Yes | 1,869 | 26.54% || **Total** | **7,043** | **100%** |---# 7. Dashboard AnalysisThe Power BI dashboard was designed to provide a clear overview of customer churn while allowing users to investigate different customer segments using interactive slicers.## Dashboard KPIs| Dashboard Component | Metric ||---|---|| Total Customers | 7,043 || Churned Customers | 1,869 || Churn Rate | 26.54% || Average Monthly Charges | $64.76 |## Dashboard Visuals| Visual | Business Question ||---|---|| Churn Distribution | How many customers have churned versus remained? || Churn Rate by Contract | Which contract type has the highest churn? || Churn Rate by Internet Service | Which internet service segment has the highest churn? || Churn Rate by Tenure Group | When are customers most likely to churn? || Churn Rate by Payment Method | Which payment methods are associated with higher churn? |## Interactive Slicers| Slicer | Purpose ||---|---|| Contract | Filter customers by contract type || Internet Service | Filter customers by internet service || Payment Method | Filter customers by payment method || Gender | Compare churn across genders || Senior Citizen | Compare churn across senior-citizen status |---# 8. Key Insights## Insight 1 â€” Overall ChurnThe dataset contains **1,869 churned customers**, representing a **26.54% overall churn rate**. The remaining **5,174 customers (73.46%)** were retained.## Insight 2 â€” Contract Type**Month-to-month customers have the highest churn rate** among the three contract groups shown in the dashboard.Customers on one-year and two-year contracts have substantially lower churn rates.This suggests that contract length is an important factor to consider when investigating customer retention.## Insight 3 â€” Internet Service**Fiber optic customers show the highest churn rate** among the internet service categories displayed.DSL customers have a lower churn rate, while customers without internet service have the lowest churn rate.The high churn observed among Fiber optic customers makes this segment a priority for further investigation.## Insight 4 â€” TenureCustomers in the **0â€“12 month tenure group have the highest churn rate**.Churn decreases progressively across the longer tenure groups shown in the dashboard:| Tenure Group | Churn Pattern ||---|---|| 0â€“12 months | Highest || 13â€“24 months | Lower than first year || 25â€“48 months | Further decline || 49â€“72 months | Lowest |This indicates that the **early customer lifecycle is a particularly important retention period**.## Insight 5 â€” Payment Method**Electronic check customers have the highest churn rate** among the payment methods shown.The remaining payment methods show substantially lower churn rates.This makes payment method an important customer segment to investigate when designing retention strategies.## Insight 6 â€” Customer ChargesThe dashboard reports an **average monthly charge of $64.76** across the customer base.Monthly charges can be examined alongside contract type, tenure, and service type to better understand the characteristics of customers who churn.---# 9. Business RecommendationsThe following recommendations are based on the patterns identified in the analysis. They are business recommendations rather than claims of causation.| Priority | Recommendation | Reason ||---|---|---|| High | Strengthen retention efforts during the first 12 months | The 0â€“12 month group has the highest churn || High | Investigate the customer experience of Fiber optic users | Fiber optic customers show the highest churn among internet-service groups || High | Develop retention strategies for month-to-month customers | Month-to-month customers show the highest contract-level churn || High | Investigate the reasons for high churn among electronic-check users | Electronic check has the highest payment-method churn || Medium | Encourage suitable customers to consider longer-term contracts | Longer contracts show lower churn || Medium | Use customer segmentation to target retention campaigns | Churn varies across customer segments |---# 10. Assumptions & Limitations## Assumptions| Assumption | Description ||---|---|| Customer-level analysis | Each row represents an individual customer || Churn as outcome | `Churn` is treated as the target variable || Association | Observed relationships are treated as associations rather than causal effects || Dataset definitions | Customer categories are interpreted according to the dataset |## Limitations| Limitation | Impact ||---|---|| Dataset-specific | Findings may not represent every telecommunications business || No causal analysis | The project identifies patterns but does not prove why customers churn || Limited customer context | Factors such as customer satisfaction and competitor activity are not included || Historical data | The analysis describes the available dataset rather than future behavior || No individual prediction | The dashboard is analytical and is not a customer-level churn prediction model |---# 11. Future Enhancements| Enhancement | Purpose ||---|---|| Churn Prediction Model | Predict customers who may be at higher risk of churn || Customer Segmentation | Identify groups with similar churn characteristics || Customer Lifetime Value | Estimate the financial value of retained customers || Statistical Testing | Test the strength of important relationships || Additional Customer Data | Incorporate satisfaction, complaints and support interactions || Advanced Power BI Analysis | Add drill-through pages and deeper segment analysis |---# 12. Dashboard Preview### Customer Churn Analysis DashboardThe dashboard provides an interactive overview of customer churn, including KPIs, churn distribution, contract analysis, internet-service analysis, tenure analysis, payment-method analysis, and customer-level filtering.![Customer Churn Dashboard](visuals/dashboard/customer_churn_dashboard.png)---# 13. Repository Structure| Folder / File | Purpose ||---|---|| `data/raw/` | Original customer churn dataset || `data/processed/` | Cleaned dataset used for analysis || `notebooks/` | Python/Jupyter analysis || `sql/` | SQL business analysis queries || `visuals/dashboard/` | Power BI dashboard screenshot || `visuals/eda/` | Selected exploratory analysis visuals || `.gitignore` | Files excluded from version control || `README.md` | Project documentation |---# 14. Deliverables| Deliverable | Description | Location ||---|---|---|| Cleaned Dataset | Analysis-ready customer dataset | `data/processed/` || Jupyter Notebook | Data cleaning and exploratory analysis | `notebooks/` || SQL Analysis | Business-focused churn queries | `sql/` || Power BI Dashboard | Interactive churn dashboard | Power BI || Dashboard Screenshot | Portfolio-ready dashboard image | `visuals/dashboard/` || README | Project documentation | Repository root |---# 15. Author**Luciana****Data Analyst | Data Analytics & Business Intelligence**| Platform | Link ||---|---|| LinkedIn | linkedin.com/in/lucianaidogwu || GitHub | https://github.com/luciana677 || Email | idogwuogechi@gmail.com |---**Last updated: August 2026**
+📊 Customer Churn Analytics
+
+An end-to-end data analytics project investigating customer churn patterns, customer behavior, service usage, contract types, and billing characteristics to identify factors associated with customer retention and churn.
+
+---
+
+📌 Project Type
+
+- Exploratory Data Analysis (EDA)
+- Data Cleaning / Wrangling
+- Customer Churn Analysis
+- SQL Analysis
+- Dashboard / Data Visualization
+- Business Intelligence
+- End-to-End Analytics Project
+
+---
+
+📑 Table of Contents
+
+1. "Project Overview" (#1-project-overview)
+2. "Objectives" (#2-objectives)
+3. "Project Scope & Tools" (#3-project-scope--tools)
+4. "Repository Structure" (#4-repository-structure)
+5. "Data Workflow" (#5-data-workflow)
+6. "Dataset Overview" (#6-dataset-overview)
+7. "Analysis & Metrics" (#7-analysis--metrics)
+8. "Key Insights" (#8-key-insights)
+9. "Business Recommendations" (#9-business-recommendations)
+10. "Assumptions & Limitations" (#10-assumptions--limitations)
+11. "Future Enhancements" (#11-future-enhancements)
+12. "Dashboard" (#12-dashboard)
+13. "Deliverables" (#13-deliverables)
+14. "Author" (#14-author)
+
+---
+
+1. Project Overview
+
+Context
+
+Customer retention is an important business concern for subscription-based companies. Understanding why customers leave can help organizations identify high-risk customer segments, improve customer experience, and develop more effective retention strategies.
+
+Problem Statement
+
+The objective of this project was to analyze customer data and identify patterns associated with customer churn. The analysis focuses on customer demographics, tenure, services, contract types, payment methods, and billing characteristics to understand which customer segments are more likely to churn.
+
+Approach
+
+The project involved data inspection, data cleaning, exploratory analysis, SQL-based analysis, and interactive dashboard development.
+
+Key areas investigated include:
+
+- Customer demographics
+- Customer tenure
+- Internet and phone services
+- Contract type
+- Payment method
+- Monthly charges
+- Total charges
+- Additional services
+- Customer churn
+
+Outcome
+
+The analysis produced a cleaned customer dataset, analytical findings, SQL queries, visualizations, and an interactive dashboard designed to communicate churn patterns and support data-driven customer retention decisions.
+
+---
+
+2. Objectives
+
+Primary Objective
+
+Identify customer characteristics, services, and billing factors associated with customer churn.
+
+Secondary Objectives
+
+- Clean and prepare the customer dataset for analysis.
+- Calculate overall customer churn and retention metrics.
+- Analyze churn across demographic and service-related segments.
+- Investigate the relationship between tenure and churn.
+- Examine churn patterns across contract and payment types.
+- Analyze monthly and total charges by churn status.
+- Use SQL to answer business-focused analytical questions.
+- Develop an interactive dashboard for communicating findings.
+- Translate analytical findings into actionable business recommendations.
+
+---
+
+3. Project Scope & Tools
+
+Scope
+
+Dimension| Details
+In Scope| Customer demographics, services, billing, contracts, tenure, churn behavior and dashboard analysis
+Out of Scope| Individual customer prediction, automated retention campaigns and causal inference
+Unit of Analysis| Individual customer
+Target Variable| "Churn"
+Analysis Focus| Factors associated with customer churn
+
+Tools & Technologies
+
+Category| Tool(s) Used
+Data Source| CSV Dataset
+Data Processing| Python
+Data Analysis| Python / Jupyter Notebook
+Business Analysis| SQL
+Visualization| Power BI
+Version Control| Git / GitHub
+Documentation| Markdown
+
+---
+
+4. Repository Structure
+
+📊 Customer-Churn-Analytics
+│
+├── 📂 data
+│   ├── 📂 raw
+│   │   └── customer_churn.csv
+│   │
+│   └── 📂 processed
+│       └── customer_churn_cleaned.csv
+│
+├── 📂 notebooks
+│   └── customer_churn_analysis.ipynb
+│
+├── 📂 sql
+│   └── churn_analysis.sql
+│
+├── 📂 visuals
+│   ├── 📂 dashboard
+│   │   └── customer_churn_dashboard.png
+│   │
+│   └── 📂 eda
+│       └── [selected EDA visuals]
+│
+├── 📄 .gitignore
+└── 📄 README.md
+
+---
+
+5. Data Workflow
+
+Raw Dataset
+     ↓
+Data Inspection
+     ↓
+Data Cleaning
+     ↓
+Exploratory Data Analysis
+     ↓
+SQL Business Analysis
+     ↓
+Feature Preparation
+     ↓
+Power BI Visualization
+     ↓
+Dashboard & Insights
+     ↓
+Business Recommendations
+
+1. Data Source
+
+The project uses a customer churn dataset containing demographic, service, contract, billing, and churn information.
+
+2. Data Inspection
+
+The dataset was examined for:
+
+- Dataset structure
+- Data types
+- Missing values
+- Duplicate records
+- Inconsistent values
+- Numerical and categorical variables
+- Potential data-quality issues
+
+3. Data Cleaning
+
+Data-quality issues were identified and addressed before analysis.
+
+Particular attention was given to the "TotalCharges" field, where values required cleaning and conversion before numerical analysis.
+
+4. Exploratory Analysis
+
+Customer characteristics were compared across churn groups to identify patterns in customer behavior and service usage.
+
+5. SQL Analysis
+
+SQL was used to answer business-focused questions and calculate churn-related metrics across customer segments.
+
+6. Visualization
+
+Key findings were transformed into interactive Power BI visuals and dashboard components.
+
+7. Output
+
+The final outputs include a cleaned dataset, analytical notebook, SQL analysis, visualizations, and an interactive Power BI dashboard.
+
+---
+
+6. Dataset Overview
+
+Dataset Description
+
+The dataset contains customer-level information covering demographics, services, contracts, billing characteristics, tenure, and churn status.
+
+Key Fields
+
+Field| Description
+"customerID"| Unique customer identifier
+"gender"| Customer gender
+"SeniorCitizen"| Indicates whether the customer is a senior citizen
+"Partner"| Whether the customer has a partner
+"Dependents"| Whether the customer has dependents
+"tenure"| Number of months the customer has stayed with the company
+"PhoneService"| Whether the customer has phone service
+"MultipleLines"| Multiple phone line subscription status
+"InternetService"| Type of internet service
+"OnlineSecurity"| Online security subscription
+"OnlineBackup"| Online backup subscription
+"DeviceProtection"| Device protection subscription
+"TechSupport"| Technical support subscription
+"StreamingTV"| Streaming TV subscription
+"StreamingMovies"| Streaming movies subscription
+"Contract"| Customer contract type
+"PaperlessBilling"| Paperless billing status
+"PaymentMethod"| Customer payment method
+"MonthlyCharges"| Monthly amount charged
+"TotalCharges"| Total amount charged
+"Churn"| Customer churn status
+
+Unit of Analysis
+
+One row represents an individual customer.
+
+Target Variable
+
+"Churn"
+
+- "Yes" — Customer churned
+- "No" — Customer remained with the company
+
+---
+
+7. Analysis & Metrics
+
+Analytical Approach
+
+The analysis focused on understanding who churns, what services they use, how long they stay, and how billing and contract characteristics relate to churn.
+
+The following areas were investigated:
+
+- Overall churn distribution
+- Churn rate
+- Customer tenure
+- Gender
+- Senior citizen status
+- Partner and dependent status
+- Phone service
+- Internet service
+- Online security
+- Online backup
+- Device protection
+- Technical support
+- Streaming services
+- Contract type
+- Paperless billing
+- Payment method
+- Monthly charges
+- Total charges
+
+Key Metrics
+
+Metric| Definition| Purpose
+Total Customers| Number of unique customers| Understand customer base size
+Churned Customers| Number of customers who churned| Measure customer loss
+Churn Rate| Churned customers ÷ total customers| Measure overall churn
+Retention Rate| Retained customers ÷ total customers| Measure customer retention
+Average Tenure| Mean customer tenure| Compare customer longevity
+Average Monthly Charges| Mean monthly charges| Examine billing patterns
+Average Total Charges| Mean total charges| Examine customer revenue contribution
+
+SQL Business Questions
+
+SQL analysis was used to answer questions such as:
+
+- What is the overall customer churn rate?
+- Which contract types have the highest churn?
+- How does churn vary by internet service?
+- How does churn differ by payment method?
+- What is the average tenure of churned versus retained customers?
+- How do monthly charges differ between churned and retained customers?
+- Which customer segments show higher churn rates?
+- Which services are associated with lower or higher churn?
+
+---
+
+8. Key Insights
+
+Insight 1 — Overall Churn
+
+The analysis established the overall distribution of customers who churned versus those who remained with the company, providing a baseline for evaluating customer retention.
+
+Insight 2 — Internet Service
+
+Internet service type showed meaningful differences in churn behavior.
+
+The analysis found a higher churn rate among customers using Fiber optic service compared with customers using DSL and customers without internet service.
+
+Internet Service| Churn Rate
+DSL| 18.96%
+Fiber optic| 41.89%
+No internet service| 7.40%
+
+This makes internet service an important segment for further investigation.
+
+Insight 3 — Contract Type
+
+Contract structure showed an important relationship with customer retention. Customers on shorter-term arrangements demonstrated greater churn risk compared with customers on longer-term contracts.
+
+Insight 4 — Customer Tenure
+
+Customer tenure was an important indicator of retention behavior. Customers with shorter relationships with the company were more likely to churn, while longer-tenured customers generally showed stronger retention.
+
+Insight 5 — Billing
+
+Monthly charges showed differences between churned and retained customers, indicating that pricing and monthly customer cost may be relevant factors in churn analysis.
+
+Insight 6 — Customer Services
+
+Additional services such as online security, online backup, device protection, and technical support were investigated to determine whether service engagement was associated with customer retention.
+
+---
+
+9. Business Recommendations
+
+Priority| Recommendation| Based On
+High| Develop targeted retention strategies for high-churn customer segments.| Segment-level churn analysis
+High| Investigate the factors contributing to the high churn rate among Fiber optic customers.| Internet service analysis
+High| Encourage suitable customers to move toward longer-term contracts through appropriate incentives.| Contract analysis
+Medium| Strengthen early-stage customer engagement to reduce churn among newer customers.| Tenure analysis
+Medium| Review pricing and billing patterns among high-churn customers.| Monthly charges analysis
+Medium| Evaluate the value of additional support and security services as retention tools.| Service-level analysis
+
+«These recommendations are based on observed associations in the dataset and should be validated with additional business and customer-level information before implementation.»
+
+---
+
+10. Assumptions & Limitations
+
+Assumptions
+
+- Each row represents one unique customer.
+- "Churn" is treated as the outcome variable provided in the dataset.
+- Customer and service categories are interpreted according to the dataset definitions.
+- The analysis focuses on associations rather than causal relationships.
+
+Limitations
+
+- The dataset represents a specific customer population and may not generalize to every telecommunications business.
+- Churn analysis identifies patterns but does not establish causation.
+- Customer satisfaction, complaints, competitor activity, and other external factors are not included.
+- The analysis does not predict individual customer churn.
+- Some variables may contain data-quality issues that can influence analytical results.
+- Business recommendations should be validated against additional operational and customer feedback data.
+
+---
+
+11. Future Enhancements
+
+Future improvements could include:
+
+- Build a customer churn prediction model.
+- Develop customer-level churn risk scoring.
+- Perform statistical testing of important churn relationships.
+- Conduct deeper customer segmentation.
+- Analyze customer lifetime value.
+- Investigate the relationship between services and retention.
+- Build automated SQL reporting.
+- Develop a more advanced Power BI dashboard with drill-through analysis.
+- Incorporate additional customer satisfaction and support data.
+
+---
+
+12. Dashboard
+
+Power BI Dashboard
+
+The interactive Power BI dashboard provides an overview of customer churn and allows users to explore churn patterns across customer demographics, services, contracts, tenure, and billing characteristics.
+
+Dashboard Features
+
+- Total customer KPI
+- Churned customer KPI
+- Churn rate KPI
+- Retention rate KPI
+- Customer churn distribution
+- Churn by contract type
+- Churn by internet service
+- Churn by payment method
+- Tenure analysis
+- Monthly charges analysis
+- Customer segmentation
+- Interactive filters/slicers
+- Key analytical insights
+
+Dashboard Preview
+
+"Customer Churn Dashboard"
+
+visuals/dashboard/customer_churn_dashboard.png
+
+Power BI Dashboard: [Add your shareable dashboard link here]
+
+---
+
+13. Deliverables
+
+Deliverable| Description| Location
+Cleaned Dataset| Processed dataset used for analysis| "/data/processed/"
+Jupyter Notebook| Data cleaning and exploratory analysis| "/notebooks/"
+SQL Analysis| Business-focused churn queries| "/sql/"
+Dashboard| Interactive Power BI dashboard| Power BI link
+Dashboard Screenshot| Portfolio-ready dashboard image| "/visuals/"
+README| Project documentation| "/README.md"
+
+---
+
+14. Author
+
+Luciana
+
+Data Analyst | Data Analytics & Business Intelligence
+
+- 🔗 LinkedIn: linkedin.com/in/lucianaidogwu
+- 💼 GitHub: https://github.com/luciana677
+- 📧 Email: idogwuogechi@gmail.com
+
+---
+
+Last updated: August 2026
