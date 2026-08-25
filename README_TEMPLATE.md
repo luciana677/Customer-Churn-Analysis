@@ -61,7 +61,7 @@ Key areas investigated include:
 
 Outcome
 
-The analysis produced a cleaned customer dataset, analytical findings, SQL queries, visualizations, and an interactive dashboard designed to communicate churn patterns and support data-driven customer retention decisions.
+The analysis produced a cleaned customer dataset, analytical findings, visualizations, and an interactive dashboard designed to communicate churn patterns and support data-driven customer retention decisions.
 
 ---
 
